@@ -1,5 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Add this section to your HTML -->
+<section class="documentation" id="docs">
+    <div class="container">
+        <h2 class="section-title animate">BMres Language Documentation</h2>
+        
+        <div class="docs-container animate delay-1">
+            <div class="docs-card">
+                <h3><i class="fas fa-file-pdf"></i> Complete Language Guide</h3>
+                <p>Everything you need to know about BMres syntax and features.</p>
+                <a href="/docs/BMres_Guide.pdf" class="btn" download>
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+            
+            <div class="docs-card">
+                <h3><i class="fas fa-code"></i> Code Examples</h3>
+                <p>Collection of practical BMres code snippets.</p>
+                <a href="/docs/BMres_Examples.zip" class="btn" download>
+                    <i class="fas fa-download"></i> Download Examples
+                </a>
+            </div>
+            
+            <div class="docs-card">
+                <h3><i class="fas fa-video"></i> Video Tutorials</h3>
+                <p>Step-by-step video guides for beginners.</p>
+                <a href="https://youtube.com/playlist?list=BMresTutorials" class="btn">
+                    <i class="fas fa-external-link-alt"></i> Watch Now
+                </a>
+            </div>
+        </div>
+        
+        <div class="inventor-note animate delay-2">
+            <p>
+                <strong>Note:</strong> The BMres language and IDE were invented by 
+                <span class="highlight">Saaketh</span> using 
+                <span class="highlight">AI-assisted development</span>.
+                All rights reserved.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Add to your CSS -->
+<style>
+    .docs-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+    }
+    
+    .docs-card {
+        background: var(--card-bg);
+        padding: 2rem;
+        border-radius: 8px;
+        border: 1px solid rgba(100, 255, 218, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .docs-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--glow);
+    }
+    
+    .docs-card h3 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    
+    .docs-card p {
+        margin-bottom: 1.5rem;
+        min-height: 60px;
+    }
+    
+    .inventor-note {
+        background: rgba(100, 255, 218, 0.1);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 3px solid var(--accent);
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .highlight {
+        color: var(--accent);
+        font-weight: 600;
+    }
+</style>
+
+<!-- Sample PDF content (BMres_Guide.pdf should contain this) -->
+<!--
+BMres Language Reference
+Created by Saaketh using AI-assisted development
+
+1. BASIC SYNTAX
+say "Hello World"       - Prints text
+set x to 5              - Variable assignment
+ask "Name?" to name     - User input
+
+2. CONTROL FLOW
+if x > 5 then           - Conditionals
+    say "Big"
+end
+
+repeat 5 times          - Loops
+    say "Hi"
+end
+
+3. SPECIAL FEATURES
+$last_input             - Last user input
+pi, e                   - Math constants
+
+...
+-->
+    <!-- Add this in your HTML where the main intro should go -->
+<section class="hero" id="about">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="animate">Welcome to <span>BMres IDE</span></h1>
+            <p class="animate delay-1">
+                The <span class="accent-text">AI-assisted programming environment</span> for the BMres language. 
+                A perfect blend of simplicity for beginners and power for advanced users.
+            </p>
+            
+            <div class="hero-features animate delay-2">
+                <div class="feature-chip">
+                    <i class="fas fa-bolt"></i> Lightning-fast interpreter
+                </div>
+                <div class="feature-chip">
+                    <i class="fas fa-robot"></i> AI-powered suggestions
+                </div>
+                <div class="feature-chip">
+                    <i class="fas fa-palette"></i> Custom syntax highlighting
+                </div>
+            </div>
+            
+            <div class="code-preview animate delay-3">
+                <pre><code class="language-bmres"># Example: Simple BMI Calculator
+ask "Enter your height (m)" to height
+ask "Enter your weight (kg)" to weight
+
+set bmi to weight / (height * height)
+say "Your BMI is " + bmi
+
+if bmi > 25 then
+    say "Consider more exercise!"
+else
+    say "You're doing great!"
+end</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add this to your CSS -->
+<style>
+    .accent-text {
+        color: var(--accent);
+        font-weight: 600;
+    }
+    
+    .hero-features {
+        display: flex;
+        gap: 1rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+    }
+    
+    .feature-chip {
+        background: var(--card-bg);
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        border: 1px solid var(--accent-dark);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .feature-chip i {
+        color: var(--accent);
+    }
+    
+    .code-preview {
+        background: var(--dark);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 3px solid var(--accent);
+        margin-top: 1.5rem;
+        overflow-x: auto;
+    }
+    
+    .code-preview pre {
+        margin: 0;
+        font-family: 'Consolas', monospace;
+    }
+    
+    .language-bmres {
+        color: var(--text);
+        line-height: 1.5;
+    }
+    
+    /* Syntax colors for the preview */
+    .token.comment { color: #6A9955 }
+    .token.keyword { color: #569CD6; font-weight: bold }
+    .token.string { color: #CE9178 }
+    .token.number { color: #B5CEA8 }
+    .token.function { color: #DCDCAA }
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
